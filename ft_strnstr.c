@@ -6,13 +6,12 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:44:30 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 17:24:19 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 17:26:53 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
 
 char	*ft_strnstr(char *str, char *search, size_t len)
 {
