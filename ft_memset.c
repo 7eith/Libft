@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:43:50 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 18:36:03 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 18:37:39 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t		count;
+	size_t			count;
 	unsigned char	*str;
 
 	count = 0;
@@ -25,5 +25,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		str[count] = c;
 		count++;
 	}
-	return ((void *) str);
+	return ((void *)str);
 }
