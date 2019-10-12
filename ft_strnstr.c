@@ -6,14 +6,14 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:44:30 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 17:26:53 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/12 14:10:45 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strnstr(char *str, char *search, size_t len)
+char	*ft_strnstr(const char *str, const char *search, size_t len)
 {
 	size_t		i;
 	size_t		j;
