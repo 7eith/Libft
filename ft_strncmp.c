@@ -6,12 +6,12 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 16:36:10 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/12 17:14:20 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 01:29:42 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

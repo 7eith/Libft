@@ -6,12 +6,12 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 17:16:51 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/12 20:00:06 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 01:29:26 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
