@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:44:30 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 01:29:45 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 01:42:40 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *str, const char *search, size_t len)
 
 	i = 0;
 	j = 0;
-	if (search[i] == '\0')
+	if (search[0] == '\0')
 		return ((char *)str);
 	while (str[i] && i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 20:32:40 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 18:44:31 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 01:39:57 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,19 +20,13 @@ void	*ft_memmove(void *dest, const void *source, size_t n)
 	char	*dst;
 	char	tmp[n];
 
-	count = 0;
+	count = -1;
 	src = (char *)source;
 	dst = dest;
-	while (count < n)
-	{
+	while (++count < n)
 		tmp[count] = src[count];
-		count++;
-	}
-	count = 0;
-	while (count < n)
-	{
+	count = -1;
+	while (++count < n)
 		dst[count] = tmp[count];
-		count++;
-	}
 	return (dst);
 }

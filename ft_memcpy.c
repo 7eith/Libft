@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 13:56:35 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 16:19:26 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 01:38:19 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,15 +19,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*source;
 	char	*d;
 
-	count = 0;
+	count = -1;
 	source = (char *)src;
 	d = (char *)dest;
-	if (n == 0)
+	if (!n)
 		return (d);
-	while (count < n)
-	{
+	while (++count < n)
 		d[count] = source[count];
-		count++;
-	}
 	return (d);
 }
