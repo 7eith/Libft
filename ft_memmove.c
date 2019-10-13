@@ -6,30 +6,35 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 20:32:40 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/12 20:44:32 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/13 18:39:35 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *source, size_t n)
 {
 	size_t	count;
-	char	*source;
-	char	*tmp;
-	char	*d;
+	char	*src;
+	char	*dst;
+	char	tmp[n];
 
 	count = 0;
-	source = (char *)src;
-	d = (char *)dest;
-	tmp	= (char *)source;
-	if (n == 0 || dest == 0)
-		return ((void *)d);
+	src = (char *)source;
+	dst = dest;
 	while (count < n)
 	{
-		d[count] = tmp[count];
+		tmp[count] = src[count];
 		count++;
 	}
-	return ((void *)d);
+	count = 0;
+	while (count < n)
+	{
+		dst[count] = tmp[count];
+		count++;
+	}
+	return (dst);
 }
