@@ -6,13 +6,10 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/10/15 18:57:51 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/15 19:22:27 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
-
-# TODO: Remove relink
-
 
 NAME 	= 	libft.a
 
