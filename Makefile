@@ -6,10 +6,13 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/10/15 14:14:51 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/15 18:57:51 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
+
+# TODO: Remove relink
+
 
 NAME 	= 	libft.a
 
@@ -40,6 +43,7 @@ SRCS	=	ft_atoi.c				\
 			ft_strlcpy.c			\
 			ft_strlcat.c			\
 			ft_substr.c				\
+			ft_strjoin.c			\
 
 
 OBJS	= 	$(SRCS:.c=.o)
@@ -47,13 +51,15 @@ OBJS	= 	$(SRCS:.c=.o)
 all		: 	$(NAME)
 
 $(NAME)	:	$(OBJS)
-			gcc -c -Wall -Werror -Wextra -I $(HEADER) $(SRCS)
-			ar -rcs $(NAME) $(OBJS)
+		ar -rcs $(NAME) $(OBJS)
+
+%.o:%.c $(HEADER)
+		gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
 
 clean	:
-			/bin/rm -f $(OBJS)
+		/bin/rm -f $(OBJS)
 
 fclean	:	clean
-			/bin/rm -f $(NAME)
+		/bin/rm -f $(NAME)
 
 re		: 	fclean all
