@@ -6,14 +6,14 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 19:52:34 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 21:46:48 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/17 01:31:40 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		ft_can_trim(char c, char const *set)
+static	int	ft_can_trim(char c, char const *set)
 {
 	int		count;
 
@@ -24,19 +24,35 @@ static	int		ft_can_trim(char c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static	int	ft_get_size(char const *s1, char const *set)
 {
 	int		count;
 	int		size;
-	int		ssize;
-	char	*tab;
 
 	count = 0;
 	size = ft_strlen(s1);
-	ssize = ft_strlen(set);
-	while (s1[count] && ssize < count && ft_can_trim(s1[count], set))
-	{
-		size--; // malloc
-		count++; // skip
-	}
+	while (ft_can_trim(s1[size - count - 1], set))
+		count++;
+	return (size - count);
+}
+
+char		*ft_strtrim(char const *s1, char const *set)
+{
+	int		count;
+	int		size;
+	char	*tab;
+
+	count = 0;
+	size = 0;
+	if (!s1)
+		return (0);
+	while (ft_can_trim(s1[count], set))
+		count++;
+	if (count == (int)ft_strlen(s1))
+		return ("");
+	size = ft_get_size(s1 + count, set) + 1;
+	if (!(tab = (char *)malloc((size) * sizeof(char))))
+		return (NULL);
+	ft_strlcpy(tab, s1 + count, size);
+	return (tab);
 }
