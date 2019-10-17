@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 19:52:34 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/17 01:31:40 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/17 01:37:04 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -49,7 +49,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	while (ft_can_trim(s1[count], set))
 		count++;
 	if (count == (int)ft_strlen(s1))
-		return ("");
+		return (ft_strdup(""));
 	size = ft_get_size(s1 + count, set) + 1;
 	if (!(tab = (char *)malloc((size) * sizeof(char))))
 		return (NULL);
