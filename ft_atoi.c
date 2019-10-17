@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 14:55:43 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/12 14:57:44 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/17 21:40:25 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@ int		ft_atoi(const char *str)
 {
 	int		i;
 	int		neg;
-	int		number;
+	long	number;
 
 	neg = 1;
 	i = 0;
