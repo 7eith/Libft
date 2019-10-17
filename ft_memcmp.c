@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 20:13:36 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 01:37:27 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/16 18:15:01 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	str2 = (unsigned char*)s2;
 	if (!n)
 		return (0);
-	while (str1[i] == str2[i] && str1[i] && str2[i] && i < n - 1)
+	while (str1[i] == str2[i] && i < n - 1)
 		i++;
 	return (str1[i] - str2[i]);
 }
