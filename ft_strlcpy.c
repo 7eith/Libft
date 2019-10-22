@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 21:40:28 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 22:29:09 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 13:22:43 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	count = 0;
 	size = 0;
+	if (!dst)
+		return (0);
 	while (src[size])
 		size++;
 	if (!dstsize)
