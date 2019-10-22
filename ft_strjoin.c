@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 16:04:22 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/17 20:21:26 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 23:48:35 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*tab;
 
 	count = -1;
+	if (!s1)
+		return (0);
 	s1_size = ft_strlen(s1);
 	if (!(tab = (char *)malloc((s1_size + ft_strlen(s2) + 1) * sizeof(char))))
 		return (NULL);
