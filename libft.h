@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 14:03:52 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 17:10:43 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/25 18:03:21 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -60,5 +60,6 @@ typedef	struct		s_list
 }					t_list;
 
 t_list				*ft_lstnew(void *content);
+void				ft_lstadd_front(t_list **alst, t_list *new);
 
 #endif

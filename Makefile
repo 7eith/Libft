@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/10/25 16:52:39 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/25 17:13:33 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -51,6 +51,7 @@ SRCS	=	ft_atoi.c				\
 			ft_putnbr_fd.c			\
 
 BONUS	=	ft_lstnew_bonus.c		\
+			ft_lstaddfront_bonus.c	\
 
 OBJS_B	=	$(BONUS:.c=.o)
 

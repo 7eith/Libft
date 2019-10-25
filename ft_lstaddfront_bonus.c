@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstnew_bonus.c                                .::    .:/ .      .::   */
+/*   ft_lstaddfront_bonus.c                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/25 16:52:57 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 18:03:08 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/25 17:12:54 by amonteli     #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/25 18:02:46 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	t_list	*list;
-
-	if (!(list = malloc(sizeof(t_list))))
-		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	if (!alst)
+		return ;
+	new->next = *alst;
+	*alst = new;
 }
