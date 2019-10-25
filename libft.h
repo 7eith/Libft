@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 14:03:52 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 16:43:03 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/25 17:10:43 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -58,5 +58,7 @@ typedef	struct		s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+t_list				*ft_lstnew(void *content);
 
 #endif
