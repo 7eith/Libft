@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/10/25 18:10:03 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/25 19:10:37 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -51,9 +51,10 @@ SRCS	=	ft_atoi.c				\
 			ft_putnbr_fd.c			\
 
 BONUS	=	ft_lstnew_bonus.c		\
-			ft_lstaddfront_bonus.c	\
+			ft_lstadd_front_bonus.c	\
 			ft_lstsize_bonus.c		\
 			ft_lstlast_bonus.c		\
+			ft_lstadd_back_bonus.c	\
 
 OBJS_B	=	$(BONUS:.c=.o)
 
@@ -62,18 +63,23 @@ OBJS	= 	$(SRCS:.c=.o)
 all		: 	$(NAME)
 
 $(NAME)	:	$(OBJS)
-		ar -rcs $(NAME) $(OBJS)
+		@ar -rcs $(NAME) $(OBJS)
+		@echo "\033[91mCompiling libft.a...\033[0m"
 
 bonus	:	$(OBJS) $(OBJS_B)
 		ar -rcs $(NAME) $(OBJS) $(OBJS_B)
 
 %.o:%.c $(HEADER)
-		gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
+		@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
+		@echo "\033[91m.\033[0m"
 
 clean	:
-		/bin/rm -f $(OBJS) $(OBJS_B)
+		@/bin/rm -f $(OBJS) $(OBJS_B)
+		@echo "\033[91mDeleting object file\033[0m"
 
 fclean	:	clean
-		/bin/rm -f $(NAME)
+		@/bin/rm -f $(NAME)
+		@echo "\033[91mDeleting libft.a...\033[0m"
+
 
 re		: 	fclean all
