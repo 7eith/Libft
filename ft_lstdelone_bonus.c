@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/25 21:32:16 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 21:32:19 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/25 21:34:55 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,4 +20,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	(*del)(lst);
 	free(lst);
 }
-
