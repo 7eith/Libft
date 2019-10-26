@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_lstmap_bonus.c                                .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2019/10/26 18:31:39 by amonteli     #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/26 21:44:29 by amonteli    ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*mynewlist;
+	t_list	*first;
+
+	if (!lst)
+		return (NULL);
+	if (!(mynewlist = ft_lstnew(f(lst->content))))
+		return (NULL);
+	first = mynewlist;
+	while (lst)
+	{
+		if (!(mynewlist->next = ft_lstnew(f(lst->content))))
+		{
+			ft_lstclear(&first, del);
+			return (0);
+		}
+		lst = lst->next;
+		mynewlist = mynewlist->next;
+	}
+	mynewlist->next = NULL;
+	return (first);
+}
