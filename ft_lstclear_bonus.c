@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/25 21:39:13 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 21:48:25 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/26 17:58:01 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,16 +16,16 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*list;
-	t_list	*first;
+	t_list	*next;
 
-	if (!lst)
+	if (!(list = *lst))
 		return ;
-	list = *lst;
-	first = *lst;
-	while (ft_lstlast(list))
+	while (list)
 	{
-		(*del)((void *)ft_lstlast(list));
-		free(ft_lstlast(list));
+		next = list->next;
+		del(list->content);
+		free(list);
+		list = next;
 	}
-	first->next = NULL;
+	*lst = NULL;
 }
