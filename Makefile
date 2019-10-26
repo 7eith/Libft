@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/10/26 20:37:30 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/26 22:10:46 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -67,23 +67,18 @@ OBJS	= 	$(SRCS:.c=.o)
 all		: 	$(NAME)
 
 $(NAME)	:	$(OBJS)
-		@ar -rcs $(NAME) $(OBJS)
-		@echo "\033[91mCompiling libft.a...\033[0m"
+		ar -rcs $(NAME) $(OBJS)
 
 bonus	:	$(OBJS) $(OBJS_B)
 		ar -rcs $(NAME) $(OBJS) $(OBJS_B)
 
 %.o:%.c $(HEADER)
-		@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
-		@echo "\033[91mCompiling $<\033[0m"
+		gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
 
 clean	:
-		@/bin/rm -f $(OBJS) $(OBJS_B)
-		@echo "\033[91mDeleting object file\033[0m"
+		/bin/rm -f $(OBJS) $(OBJS_B)
 
 fclean	:	clean
-		@/bin/rm -f $(NAME)
-		@echo "\033[91mDeleting libft.a...\033[0m"
-
+		/bin/rm -f $(NAME)
 
 re		: 	fclean all
