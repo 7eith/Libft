@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/10/25 21:39:42 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/26 18:28:35 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -57,6 +57,7 @@ BONUS	=	ft_lstnew_bonus.c		\
 			ft_lstadd_back_bonus.c	\
 			ft_lstdelone_bonus.c	\
 			ft_lstclear_bonus.c		\
+			ft_lstiter_bonus.c		\
 
 OBJS_B	=	$(BONUS:.c=.o)
 
