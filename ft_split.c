@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 13:25:34 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 00:12:08 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/27 16:53:22 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -72,13 +72,13 @@ char			**ft_split(char const *s, char c)
 	int		words;
 	char	**tab;
 
-	count = 0;
+	count = -1;
 	if (!s)
 		return (NULL);
 	words = ft_count_words(s, c);
 	if (!(tab = malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
-	while (count < words)
+	while (++count < words)
 	{
 		while (s[0] == c)
 			s++;
@@ -86,10 +86,10 @@ char			**ft_split(char const *s, char c)
 		{
 			while (count > 0)
 				free(tab[count]);
+			free(tab);
 			return (NULL);
 		}
 		s += ft_strlen(tab[count]);
-		count++;
 	}
 	tab[count] = 0;
 	return (tab);
