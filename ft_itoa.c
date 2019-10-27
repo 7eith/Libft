@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/23 17:14:13 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 22:43:46 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/27 15:22:48 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -48,7 +48,7 @@ char			*ft_itoa(int n)
 		return (NULL);
 	if (neg)
 		tab[0] = '-';
-	tab[size + 1] = '\0';
+	tab[size + (neg ? 1 : 0)] = '\0';
 	while (size)
 	{
 		tab[size - (neg ? 0 : 1)] = n % 10 + '0';
