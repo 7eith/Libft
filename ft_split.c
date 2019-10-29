@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 13:25:34 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 20:25:23 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 23:14:41 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -43,26 +43,16 @@ static int		ft_count_words(char const *s, char c)
 
 static	char	*ft_alloc_word(char const *s, char c)
 {
-	int		count;
 	int		size;
 	char	*tab;
 
-	count = 0;
 	size = 0;
 	tab = 0;
-	while (s[count] == c)
-		count++;
 	while (s[size] && s[size] != c)
 		size++;
 	if (!(tab = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
-	count = 0;
-	while (count < size)
-	{
-		tab[count] = s[count];
-		count++;
-	}
-	tab[count] = '\0';
+	ft_strlcpy(tab, s, size + 1);
 	return (tab);
 }
 
