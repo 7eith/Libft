@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/26 18:31:39 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/26 21:44:29 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 00:05:07 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,13 +25,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	first = mynewlist;
 	while (lst)
 	{
-		if (!(mynewlist->next = ft_lstnew(f(lst->content))))
+		if (lst->next)
 		{
-			ft_lstclear(&first, del);
-			return (0);
+			if (!(mynewlist->next = ft_lstnew(f(lst->content))))
+			{
+				ft_lstclear(&first, del);
+				return (0);
+			}
+			mynewlist = mynewlist->next;
 		}
 		lst = lst->next;
-		mynewlist = mynewlist->next;
 	}
 	mynewlist->next = NULL;
 	return (first);
