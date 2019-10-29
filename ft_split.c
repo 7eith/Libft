@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 13:25:34 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/27 16:53:22 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 20:25:23 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -85,7 +85,7 @@ char			**ft_split(char const *s, char c)
 		if (!(tab[count] = ft_alloc_word(s, c)))
 		{
 			while (count > 0)
-				free(tab[count]);
+				free(tab[count--]);
 			free(tab);
 			return (NULL);
 		}
