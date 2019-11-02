@@ -3,15 +3,16 @@
 /*                                                              /             */
 /*   ft_strjoin.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: amonteli <amontelimart@gmail.com>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 16:04:22 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 23:48:35 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/02 19:06:33 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -20,8 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*tab;
 
 	count = -1;
-	if (!s1)
-		return (0);
+	if (!s1 || !s2)
+		return (NULL);
 	s1_size = ft_strlen(s1);
 	if (!(tab = (char *)malloc((s1_size + ft_strlen(s2) + 1) * sizeof(char))))
 		return (NULL);
