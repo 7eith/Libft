@@ -6,13 +6,12 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/26 18:31:39 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/31 15:37:20 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/04 14:19:23 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
