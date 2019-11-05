@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 19:52:34 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/17 01:37:04 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/05 13:30:23 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -46,6 +46,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size = 0;
 	if (!s1)
 		return (0);
+	if (!set)
+		return (ft_strdup(s1));
 	while (ft_can_trim(s1[count], set))
 		count++;
 	if (count == (int)ft_strlen(s1))
