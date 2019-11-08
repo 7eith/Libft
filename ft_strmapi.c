@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 17:53:24 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 14:44:21 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 16:25:31 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[count])
 	{
-		tab[count] = (*f)(count, s[count]);
+		tab[count] = f(count, s[count]);
 		count++;
 	}
 	tab[count] = '\0';
