@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 13:25:34 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/05 13:59:23 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 17:39:10 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,15 +22,15 @@ static int		ft_count_words(char const *s, char c)
 	i = 0;
 	words = 0;
 	hasword = 0;
-	while (s[i] == c)
+	while (s[i] == c && s[i])
 		i++;
 	while (s[i])
 	{
-		if (s[i] != c)
+		if (s[i] != c && s[i])
 			hasword = 1;
 		if (s[i] == c)
 		{
-			while (s[i] == c)
+			while (s[i] == c && s[i])
 				i++;
 			if (s[i])
 				words++;
