@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 17:53:24 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 16:25:31 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 17:41:23 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*tab;
 
 	count = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	if (!(tab = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);
