@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/11/16 18:04:31 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/16 18:09:53 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -49,7 +49,7 @@ SRCS	=	ft_atoi.c				\
 			ft_putstr_fd.c			\
 			ft_putendl_fd.c			\
 			ft_putnbr_fd.c			\
-			ft_.c					\
+			ft_lstnew.c				\
 			ft_lstadd_front.c		\
 			ft_lstsize.c			\
 			ft_lstlast.c			\
