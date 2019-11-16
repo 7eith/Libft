@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstsize_bonus.c                               .::    .:/ .      .::   */
+/*   ft_lstdelone.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/25 18:04:22 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 21:25:36 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/25 21:32:16 by amonteli     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/16 18:03:31 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int		count;
-
-	count = 0;
-	while (lst)
+	if (lst)
 	{
-		lst = lst->next;
-		count++;
+		del(lst->content);
+		free(lst);
 	}
-	return (count);
 }

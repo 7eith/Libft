@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/11/09 16:29:34 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/16 18:04:31 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -49,18 +49,15 @@ SRCS	=	ft_atoi.c				\
 			ft_putstr_fd.c			\
 			ft_putendl_fd.c			\
 			ft_putnbr_fd.c			\
-
-BONUS	=	ft_lstnew_bonus.c		\
-			ft_lstadd_front_bonus.c	\
-			ft_lstsize_bonus.c		\
-			ft_lstlast_bonus.c		\
-			ft_lstadd_back_bonus.c	\
-			ft_lstdelone_bonus.c	\
-			ft_lstclear_bonus.c		\
-			ft_lstiter_bonus.c		\
-			ft_lstmap_bonus.c		\
-
-OBJS_B	=	$(BONUS:.c=.o)
+			ft_.c					\
+			ft_lstadd_front.c		\
+			ft_lstsize.c			\
+			ft_lstlast.c			\
+			ft_lstadd_back.c		\
+			ft_lstdelone.c			\
+			ft_lstclear.c			\
+			ft_lstiter.c			\
+			ft_lstmap.c				\
 
 OBJS	= 	$(SRCS:.c=.o)
 
@@ -70,15 +67,15 @@ $(NAME)	:	$(OBJS)
 		@ar -rcs $(NAME) $(OBJS)
 		@echo "\033[90m[\033[32mSuccess\033[90m]\033[32m Successfully compiled Libft.\033[0m"
 
-bonus	:	$(OBJS) $(OBJS_B)
-		ar -rcs $(NAME) $(OBJS) $(OBJS_B)
+bonus	:	$(OBJS)
+		ar -rcs $(NAME) $(OBJS)
 
 %.o:%.c $(HEADER)
 		@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
 		@echo "\033[90m[\033[32mOK\033[90m]\033[34m Compiling $<\033[0m"
 
 clean	:
-		@/bin/rm -f $(OBJS) $(OBJS_B)
+		@/bin/rm -f $(OBJS)
 		@echo "\033[90m[\033[91mDeleting\033[90m]\033[31m Object files deleted\033[0m"
 
 fclean	:	clean

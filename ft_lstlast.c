@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstnew_bonus.c                                .::    .:/ .      .::   */
+/*   ft_lstlast.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/25 16:52:57 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 18:03:08 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/25 18:10:14 by amonteli     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/16 18:03:45 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list		*ft_lstlast(t_list *lst)
 {
-	t_list	*list;
-
-	if (!(list = malloc(sizeof(t_list))))
-		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	if (!lst)
+		return (0);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

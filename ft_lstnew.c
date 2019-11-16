@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstdelone_bonus.c                             .::    .:/ .      .::   */
+/*   ft_lstnew.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/25 21:32:16 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 19:25:30 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/25 16:52:57 by amonteli     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/16 18:03:40 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+t_list	*ft_lstnew(void *content)
 {
-	if (lst)
-	{
-		del(lst->content);
-		free(lst);
-	}
+	t_list	*list;
+
+	if (!(list = malloc(sizeof(t_list))))
+		return (NULL);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

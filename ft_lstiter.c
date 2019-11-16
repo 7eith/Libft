@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstadd_back_bonus.c                           .::    .:/ .      .::   */
+/*   ft_lstiter.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/25 18:19:55 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/25 21:25:22 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/26 18:27:11 by amonteli     #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/16 18:03:34 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*lst;
-
-	if (!alst || !new)
-		return ;
-	if (!(*alst))
-		*alst = new;
-	else
+	while (lst)
 	{
-		lst = *alst;
-		while (lst->next)
-			lst = lst->next;
-		lst->next = new;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
