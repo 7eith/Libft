@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/11/16 18:09:53 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/16 18:11:36 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -65,21 +65,21 @@ all		: 	$(NAME)
 
 $(NAME)	:	$(OBJS)
 		@ar -rcs $(NAME) $(OBJS)
-		@echo "\033[90m[\033[32mSuccess\033[90m]\033[32m Successfully compiled Libft.\033[0m"
+		@echo "\033[90m[\033[32mLibft\033[90m]\033[32m Successfully compiled Libft.\033[0m"
 
 bonus	:	$(OBJS)
 		ar -rcs $(NAME) $(OBJS)
 
 %.o:%.c $(HEADER)
 		@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
-		@echo "\033[90m[\033[32mOK\033[90m]\033[34m Compiling $<\033[0m"
+		@echo "\033[90m[\033[32mLibft\033[90m]\033[34m Compiling $<\033[0m"
 
 clean	:
 		@/bin/rm -f $(OBJS)
-		@echo "\033[90m[\033[91mDeleting\033[90m]\033[31m Object files deleted\033[0m"
+		@echo "\033[90m[\033[91mLibft\033[90m]\033[31m Object files deleted\033[0m"
 
 fclean	:	clean
 		@/bin/rm -f $(NAME)
-		@echo "\033[90m[\033[91mDeleting\033[90m]\033[31m Libft.a deleted.\033[0m"
+		@echo "\033[90m[\033[91mLibft\033[90m]\033[31m Libft.a deleted.\033[0m"
 
 re		: 	fclean all
