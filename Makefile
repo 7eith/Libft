@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2019/11/16 18:11:36 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/16 18:13:31 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -70,7 +70,7 @@ $(NAME)	:	$(OBJS)
 bonus	:	$(OBJS)
 		ar -rcs $(NAME) $(OBJS)
 
-%.o:%.c $(HEADER)
+%.o:%.c	$(HEADER)
 		@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER)
 		@echo "\033[90m[\033[32mLibft\033[90m]\033[34m Compiling $<\033[0m"
 
