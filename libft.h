@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 14:03:52 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/26 21:44:44 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/03 11:44:58 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "get_next_line/get_next_line.h"
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -69,5 +70,12 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *));
+
+/*
+**	03.01.2020 add.
+*/
+
+int					ft_lentostr(char *str, char *need);
+int					ft_lentochr(char *str, char c);
 
 #endif
