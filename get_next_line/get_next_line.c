@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/03 16:36:36 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/03 10:56:27 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/08 01:47:59 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,8 +15,8 @@
 
 char	*ft_strjoin_free(char *s1, char *s2, int action)
 {
-	size_t	count;
-	size_t	s1_size;
+	int		count;
+	int		s1_size;
 	char	*tab;
 
 	count = -1;

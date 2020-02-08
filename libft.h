@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 14:03:52 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/03 11:44:58 by amonteli    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/23 01:35:45 by amonteli    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -77,5 +77,6 @@ void (*del)(void *));
 
 int					ft_lentostr(char *str, char *need);
 int					ft_lentochr(char *str, char c);
+int					ft_numlen(int n);
 
 #endif

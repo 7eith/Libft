@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2020/01/03 11:50:29 by amonteli    ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/03 17:08:13 by amonteli    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -60,6 +60,7 @@ SRCS		=	ft_atoi.c					\
 				ft_lstmap.c					\
 				ft_lentochr.c				\
 				ft_lentostr.c				\
+				ft_numlen.c					\
 
 GNL_SRCS	=	get_next_line.c				\
 				get_next_line_utils.c		\
