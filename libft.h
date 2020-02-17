@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   libft.h                                          .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/12 14:03:52 by amonteli     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/23 01:35:45 by amonteli    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/12 14:03:52 by amonteli          #+#    #+#             */
+/*   Updated: 2020/02/17 01:04:35 by amonteli         ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
@@ -78,5 +77,14 @@ void (*del)(void *));
 int					ft_lentostr(char *str, char *need);
 int					ft_lentochr(char *str, char c);
 int					ft_numlen(int n);
+
+/*
+**	9 feb, 2020
+**	ft_strreplace
+*/
+
+char				*ft_strncpy(char *dest, char *src, unsigned int n);
+char				*ft_strreplace(const char *str, char *target,
+char *substitute);
 
 #endif

@@ -1,14 +1,13 @@
 # **************************************************************************** #
-#                                                           LE - /             #
-#                                                               /              #
-#    Makefile                                         .::    .:/ .      .::    #
-#                                                  +:+:+   +:    +:  +:+:+     #
-#    By: amonteli <amonteli@student.le-101.fr>      +:+   +:    +:    +:+      #
-#                                                  #+#   #+    #+    #+#       #
-#    Created: 2019/10/12 14:02:26 by amonteli     #+#   ##    ##    #+#        #
-#    Updated: 2020/01/03 17:08:13 by amonteli    ###    #+. /#+    ###.fr      #
-#                                                          /                   #
-#                                                         /                    #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/10/12 14:02:26 by amonteli          #+#    #+#              #
+#    Updated: 2020/02/17 01:04:38 by amonteli         ###   ########lyon.fr    #
+#                                                                              #
 # **************************************************************************** #
 
 NAME 		= 	libft.a
@@ -61,6 +60,8 @@ SRCS		=	ft_atoi.c					\
 				ft_lentochr.c				\
 				ft_lentostr.c				\
 				ft_numlen.c					\
+				ft_strncpy.c				\
+				ft_strreplace.c				\
 
 GNL_SRCS	=	get_next_line.c				\
 				get_next_line_utils.c		\
