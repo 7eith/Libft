@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+         #
+#    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/12 14:02:26 by amonteli          #+#    #+#              #
-#    Updated: 2020/02/17 01:04:38 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2020/07/16 02:58:46 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,6 @@ SRCS		=	ft_atoi.c					\
 				ft_lentostr.c				\
 				ft_numlen.c					\
 				ft_strncpy.c				\
-				ft_strreplace.c				\
 
 GNL_SRCS	=	get_next_line.c				\
 				get_next_line_utils.c		\
