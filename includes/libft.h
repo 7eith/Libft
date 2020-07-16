@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 14:03:52 by amonteli          #+#    #+#             */
-/*   Updated: 2020/07/16 03:01:40 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/17 00:30:52 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,5 @@ int					ft_numlen(int n);
 */
 
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
-char				*ft_strreplace(const char *str, char *target,
-char *substitute);
 
 #endif
