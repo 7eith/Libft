@@ -6,13 +6,15 @@
 #    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/12 14:02:26 by amonteli          #+#    #+#              #
-#    Updated: 2020/07/17 00:37:18 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2020/07/17 00:49:29 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 			= 	libft.a
 
-HEADER			=	includes
+INC_DIR			=	includes
+
+HEADERS			=	includes/libft.h includes/ft_printf.h includes/get_next_line.h
 
 SRCS			=	\
 					$(addprefix io/ft_, putchar_fd.c putendl_fd.c putnbr_fd.c putstr_fd.c) \
@@ -32,8 +34,8 @@ all				: 	$(NAME)
 $(NAME)			:	$(OBJS)
 				@ar -rcs $(NAME) $(OBJS)
 
-%.o:%.c 		$(HEADER) 
-				@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER) 
+%.o:%.c 		$(HEADERS) 
+				gcc -Wall -Wextra -Werror -o $@ -c $< -I $(INC_DIR) 
 				@echo "\033[34m█\c\033[0m"
 
 clean			:
