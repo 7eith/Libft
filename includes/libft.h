@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 14:03:52 by amonteli          #+#    #+#             */
-/*   Updated: 2020/07/17 00:30:52 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/17 00:38:13 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *));
 
 /*
-**	03.01.2020 add.
+**	3 jan 2020
+**	 added somes numbers functions
 */
 
 int					ft_lentostr(char *str, char *need);
@@ -79,10 +80,24 @@ int					ft_lentochr(char *str, char c);
 int					ft_numlen(int n);
 
 /*
-**	9 feb, 2020
-**	ft_strreplace
+**	9 feb 2020
+**	 added strncpy
 */
 
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
+
+/*
+**	17 jul 2020
+**	 merged ft_printf into libft
+*/
+
+int					ft_strchr_len(const char *s, int c);
+unsigned long long	ft_strbaselen(unsigned long long n, char *base);
+char				*ft_lltoa_base(long long n, char *base);
+int					ft_numlen(int number);
+char				*ft_ltoa(long number);
+char				*ft_utoa(unsigned int n);
+char				*ft_ulltoa_base(unsigned long long number, char *base);
+char				*ft_utoa_base(unsigned int n, char *base);
 
 #endif
