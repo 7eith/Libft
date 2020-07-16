@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lentostr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 11:45:26 by amonteli          #+#    #+#             */
-/*   Updated: 2020/02/17 01:02:09 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/16 03:02:20 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int			ft_lentostr(char *str, char *need)
 {
-	return ((int)ft_strnstr(str, need, ft_strlen(str)) - (int)str);
+	return (ft_strnstr(str, need, ft_strlen(str)) - str);
 }

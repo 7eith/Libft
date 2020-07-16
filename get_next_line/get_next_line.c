@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 16:36:36 by amonteli          #+#    #+#             */
-/*   Updated: 2020/02/17 01:01:39 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/16 03:06:55 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ int		ft_cut_buffer(char **line, t_gnl *current, t_gnl **first)
 		}
 		free(current->content);
 		free(current);
-		return (linked == current ? (int)(*first = NULL) : 0);
+		linked == current ? *first = NULL : NULL;
+		return (0);
 	}
 	size = (int)(ft_strchr(current->content, '\n') - current->content);
 	*line = ft_substr(current->content, 0, size);

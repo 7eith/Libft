@@ -6,13 +6,13 @@
 #    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/12 14:02:26 by amonteli          #+#    #+#              #
-#    Updated: 2020/07/16 02:58:46 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2020/07/16 03:24:24 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= 	libft.a
 
-HEADER		=	libft.h
+HEADER		=	includes
 
 SRCS		=	ft_atoi.c					\
 				ft_bzero.c					\
@@ -64,10 +64,8 @@ SRCS		=	ft_atoi.c					\
 
 GNL_SRCS	=	get_next_line.c				\
 				get_next_line_utils.c		\
-
-GNL_HEADERS	=	get_next_line/get_next_line.h
-
-OBJS		= 	$(SRCS:.c=.o) $(addprefix get_next_line/, $(GNL_SRCS:.c=.o))
+				
+OBJS		= 	$(addprefix srcs/, $(SRCS:.c=.o)) $(addprefix get_next_line/, $(GNL_SRCS:.c=.o))
 
 all			: 	$(NAME)
 
@@ -76,7 +74,7 @@ $(NAME)		:	$(OBJS)
 			@echo "\033[90m[\033[32mSuccess\033[90m]\033[32m Successfully compiled Libft.\033[0m"
 
 %.o:%.c 	$(HEADER) $(GNL_HEADERS)
-			@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER) -I $(GNL_HEADERS)
+			@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(HEADER) 
 			@echo "\033[90m[\033[32mOK\033[90m]\033[34m Compiling $<\033[0m"
 
 clean		:

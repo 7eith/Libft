@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 14:03:52 by amonteli          #+#    #+#             */
-/*   Updated: 2020/02/17 01:04:35 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/16 03:01:40 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "get_next_line/get_next_line.h"
+# include "get_next_line.h"
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lentochr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 11:39:17 by amonteli          #+#    #+#             */
-/*   Updated: 2020/02/17 01:02:08 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/16 03:02:21 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int			ft_lentochr(char *str, char c)
 {
-	return ((int)ft_strchr(str, c) - (int)str);
+	return (ft_strchr(str, c) - str);
 }

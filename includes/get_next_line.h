@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amonteli <amonteli@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 16:36:38 by amonteli          #+#    #+#             */
-/*   Updated: 2020/02/17 01:01:41 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/16 03:23:51 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "../libft.h"
+# include "libft.h"
 
 typedef	struct		s_gnl
 {
