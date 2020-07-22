@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/12 14:02:26 by amonteli          #+#    #+#              #
-#    Updated: 2020/07/17 00:49:29 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2020/07/22 21:17:30 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,13 +35,15 @@ $(NAME)			:	$(OBJS)
 				@ar -rcs $(NAME) $(OBJS)
 
 %.o:%.c 		$(HEADERS) 
-				gcc -Wall -Wextra -Werror -o $@ -c $< -I $(INC_DIR) 
+				@gcc -Wall -Wextra -Werror -o $@ -c $< -I $(INC_DIR) 
 				@echo "\033[34m█\c\033[0m"
 
 clean			:
-				/bin/rm -f $(OBJS)
+				@/bin/rm -f $(OBJS)
+				@echo "Cleaning objects"
 
 fclean			:	clean
-				/bin/rm -f $(NAME)
+				@/bin/rm -f $(NAME)
+				@echo "Cleaning binaries"
 
 re				: 	fclean all
