@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 14:03:52 by amonteli          #+#    #+#             */
-/*   Updated: 2020/07/17 00:38:13 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/07/31 09:11:56 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
