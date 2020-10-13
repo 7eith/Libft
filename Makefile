@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/12 14:02:26 by amonteli          #+#    #+#              #
-#    Updated: 2020/10/11 00:58:58 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2020/10/13 21:29:24 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS			=	\
 					$(addprefix numbers/ft_, atoi.c itoa.c numlen.c lentostr.c lentochr.c ltoa.c lltoa_base.c ulltoa_base.c utoa.c utoa_base.c) \
 					$(addprefix strings/ft_, split.c strchr.c strdup.c strjoin.c strlcat.c strlcpy.c strlen.c strmapi.c strncmp.c strncpy.c strnstr.c strrchr.c strtrim.c substr.c strbaselen.c strchr_len.c)	\
 					$(addprefix types/ft_, isalnum.c isalpha.c isascii.c isdigit.c isprint.c tolower.c toupper.c) \
-					$(addprefix tabs/ft_, clear_2d_tabs.c) \
+					$(addprefix tabs/ft_, clear_2d_tabs.c copy_2d_tabs.c) \
 					\
 					$(addprefix get_next_line/, get_next_line.c get_next_line_utils.c) \
 					$(addprefix printf/, ft_printf.c pf_content_manager.c pf_converter.c pf_int_converter.c pf_parser.c pf_utils.c pf_bonus.c) \

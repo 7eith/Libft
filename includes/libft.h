@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 14:03:52 by amonteli          #+#    #+#             */
-/*   Updated: 2020/10/11 01:00:50 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2020/10/13 21:30:13 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,10 +102,13 @@ char				*ft_ulltoa_base(unsigned long long number, char *base);
 char				*ft_utoa_base(unsigned int n, char *base);
 
 /*
-**	11 oct 2020.
+**	11 oct. 2020
 **	 add: clearing 2d tabs.
+**	12 oct. 2020
+**	 add: copy 2tab
 */
 
 void				ft_clear_2d_tabs(void **tab);
+char				**ft_copy_2d_tabs(char **tab);
 
 #endif
